@@ -1,0 +1,139 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.ease-in-out {
+  transition: ease-in-out 0.3s;
+}
+
+.button:hover {
+  box-shadow: 0px 0px 12px 4px #444;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+}
+
+.background {
+  height: 100%;
+  width: 100%;
+  background: darkolivegreen;
+}
+
+.form-container {
+  height: 100%;
+  width: 30%;
+  background: darkgray;
+  border-right: solid 3px black;
+}
+
+.form-title {
+  width: 100%;
+  padding-top: 10vh;
+  padding-bottom: 15vh;
+  font-size: 10vh;
+  font-weight: bolder;
+}
+
+.custom-input {
+  cursor: text;
+  height: 5vh;
+  width: 75%;
+  padding-left: 1.5vh;
+  padding-right: 1.5vh;
+  margin-left: 12.5%;
+  border: solid 2px #333;
+  background: darkgray;
+  border-radius: 2vh;
+  font-size: 3vh;
+  font-weight: bolder;
+}
+
+.custom-input:focus-visible {
+  outline: none;
+}
+
+.custom-input.error {
+  border-color: darkred;
+}
+
+.custom-input:focus {
+  border-color: #88f;
+}
+
+.custom-input-label {
+  position: relative;
+  bottom: 4.5vh;
+  left: 16%;
+  width: fit-content;
+  padding: 0.5vh;
+  color: #333;
+  background: darkgray;
+}
+
+.custom-input.error ~ .custom-input-label {
+  color: darkred;
+}
+
+.custom-input:focus ~ .custom-input-label {
+  bottom: 7.5vh;
+  color: #88f;
+}
+
+.custom-input.active ~ .custom-input-label {
+  bottom: 7.5vh;
+}
+
+.input-error {
+  position: relative;
+  left: 14%;
+  bottom: 3vh;
+  height: 2vh;
+  color: transparent;
+}
+
+.custom-input.error ~ .input-error {
+  color: darkred;
+}
+
+.submit-container {
+  padding-top: 10vh;
+}
+
+.submit-button {
+  cursor: pointer;
+  height: 5vh;
+  width: 60%;
+  border-radius: 2vh;
+  background: darkolivegreen;
+}
+
+.signin-link-container {
+  padding-top: 5vh;
+}
+
+.signin-link {
+  font-size: 2.5vh;
+  font-weight: bolder;
+  font-family: sans-serif;
+  color: black;
+}
