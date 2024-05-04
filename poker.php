@@ -219,7 +219,7 @@
               <div class="modal-body center column">
                 <div class="modal-title">Bet ammount:</div>
                   <input class="modal-input" id="bet" type="number" name="bet" value="<?= $_SESSION["cash"] > 100 ? "100" : $_SESSION["cash"] ?>" min="100" step="100" max="<?= $_SESSION["cash"] ?>">
-                <div class="modal-submit center" hx-post="./reevaluate.php" hx-trigger="click" hx-swap="innerHTML" hx-target="#debug" hx-include="#bet">Bet</div>
+                <button id="submit-bet" class="modal-submit center" hx-post="./reevaluate.php" hx-trigger="click" hx-swap="innerHTML" hx-target="#debug" hx-include="#bet" <?= $_SESSION["cash"] == 0 ? "disabled" : ""?>>Bet</button>
               </div>
               <div class="modal-body center column">
                 <div class="modal-title">Add ammount:</div>
@@ -262,6 +262,11 @@
           input.max = parseInt(input.max) + parseInt(add.value);
           ammount.innerText = input.max;
         }
+        let submitBet = document.getElementById("submit-bet")
+        input.oninput=()=>{
+          if(input.value==0)submitBet.disabled=true;
+          else submitBet.disabled=false;
+        };
       </script>
     </div>
   </body>

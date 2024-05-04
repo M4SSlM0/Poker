@@ -1,9 +1,9 @@
 <?php
 
     class Card{
-        public int $suit;
-        public int $value;
-        public int $color;
+        public $suit;
+        public $value;
+        public $color;
         public function __construct(int $suit, int $value, int $color = 0) {
             $this->suit = $suit;
             $this->value = $value;
@@ -12,9 +12,9 @@
     }
 
     class CheckResult{
-        public string $result;
-        public int $value;
-        public int $player;
+        public $result;
+        public $value;
+        public $player;
         public function __construct(string $result, int $value1, int $value2 = null, int $value3 = null, int $value4 = null, int $value5 = null){
             $this->result = $result;
             switch($result){
